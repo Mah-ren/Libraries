@@ -1,0 +1,22 @@
+
+bool AreYouAgreed(string message, char agreed, char notAgreed)
+{
+    char choice = 'y';
+
+    do
+    {
+        cout << message;
+        cin >> choice;
+
+        if (cin.fail()) // Check if extraction failed (non-integer input)
+        {
+            cin.clear();                                         // Clear the error flag
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+            cout << "\nInvalid Char. Please enter [n, N, y, Y] only: " << endl;
+            continue; // Prompt user again
+        }
+
+    } while (!(tolower(choice) == agreed || tolower(choice) == notAgreed));
+
+    return (tolower(choice) == 'y') ? true : false;
+}
