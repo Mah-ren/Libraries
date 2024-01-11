@@ -1,0 +1,26 @@
+
+vector<string> SplitString(string str , string delimeter = " ")
+{
+    vector<string> vString ;
+    string word ;
+    short position = 0 ;
+ 
+    while((position = str.find(delimeter)) != str.npos)
+    {   
+        word = str.substr(0,position);
+        
+        if(word != "")
+        {
+            vString.push_back(word);
+        }
+        
+        str.erase(0 , position + delimeter.length());
+    }
+
+    if(str != "")
+    {
+        vString.push_back(str);
+    } 
+
+    return vString ;
+}

@@ -1,0 +1,20 @@
+
+int CalcSumOfOneRow(int array[100][100] , short row , short columnNumber)
+{
+	int sum = 0 ;
+	
+	for(int j = 0 ; j < row ; ++j)
+	    sum += array[j][columnNumber] ;
+	return sum ;
+}
+
+void PrintArray(int sum[50] , int length)
+{ 
+    for(int i = 0 ; i < length ; i++)
+    {   
+        PrintHyphen(3);
+        cout << "\nColumn " << i+1 << " Sum: " << sum[i] << "\n" ;
+    }
+    
+    cout << "\n";
+}

@@ -1,0 +1,15 @@
+void DeleteRecordFromFile(string fileName , string record)
+{
+    vector<string> vFileContent ;
+    LoadDataFromFileToVector(fileName , vFileContent);
+
+    for(string &line : vFileContent)
+    {
+        if(line == record)
+        {
+            line = "" ;
+        }
+    }
+    
+    SaveVectorToFile(fileName , vFileContent);
+}

@@ -1,0 +1,6 @@
+
+void AddMoreElementsInArray(int array[] , int &arrayLength , int number)
+{
+    arrayLength++; 
+    array[arrayLength - 1] = number ;
+}

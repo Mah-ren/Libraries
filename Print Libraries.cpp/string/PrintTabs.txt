@@ -1,0 +1,12 @@
+
+string Tabs(short numberOfTabs)
+{
+    string t = "";
+
+    for(short i = 0 ; i < numberOfTabs ; ++i)
+    {
+        t += t + "\t";
+    }
+    
+    return t ;
+}

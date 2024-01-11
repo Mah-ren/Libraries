@@ -1,0 +1,15 @@
+
+void PrintFirstLetterOfEachWord(string str)
+{
+    bool isFirstLetter = true ; 
+    
+    for(short i = 0 ; i < str.length() ; ++i)
+    {
+        if(str.at(i) != ' ' && isFirstLetter)
+        {
+            cout << str[i] << endl ;
+        }
+
+        isFirstLetter = (str[i] == ' ' ? true : false);
+    }
+}

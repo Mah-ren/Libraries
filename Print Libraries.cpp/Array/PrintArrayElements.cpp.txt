@@ -1,0 +1,12 @@
+
+void PrintArray(shortArray[100] , short arrayLength)
+{
+    cout << "{ ";
+
+    for(shorti = 0 ; i < arrayLength ; i++)
+    {
+    	cout << Array[i] << " " ;
+    }    
+    cout << "{ ";    
+    cout << "\n";
+}

@@ -1,0 +1,22 @@
+//You need This library too if you want to Check The Match 
+//! This library takes two integer arguments and it compare them if they are equivelant to each other it will return true 😊 
+
+ 
+bool IsDigitEqual 
+(int referenceValue , int comparisonValue)
+{
+    return referenceValue == comparisonValue ;
+}
+
+ 
+void PrintDigitsAfterBeingReversed(int result)
+{
+    int remainder = 0 ;
+   
+    while(result > 0)
+    {
+        remainder = result % 10 ;
+        result    = result / 10 ;
+        cout << "\n" << remainder;
+    }
+} 

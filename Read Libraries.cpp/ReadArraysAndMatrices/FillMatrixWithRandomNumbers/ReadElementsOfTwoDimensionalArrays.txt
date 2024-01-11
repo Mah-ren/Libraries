@@ -1,0 +1,20 @@
+
+void ReadTwoDimensionalArrays(int x[10][10] , int &row, int &column)
+{
+    row = GetValidPositiveInteger("\nPlease Enter Row Number: \n");
+    column = GetValidPositiveInteger("\nPlease Enter Column Number: \n");
+    x[row][column] ;
+
+    int counter = 1 ;
+
+    for(int i = 0 ; i < row ; i++)
+    {
+        for(int j = 0 ; j < column ; j++)
+        {
+            cout << "\nEnter The Value of Element [" << counter << "]: \n"; 
+            cin >> x[i][j] ;
+            counter ++ ;
+        }
+        cout << endl;
+    }
+}

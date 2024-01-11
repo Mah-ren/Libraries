@@ -1,0 +1,17 @@
+
+int CheckRepeatedNumber(int number, int userInput)
+{
+    int remainder = 0;
+    int frequency = 0;
+
+    while (number > 0)
+    {
+        remainder = number % 10;
+        number = number / 10;
+
+        if (IsDigitEqual(remainder, userInput))
+            frequency++;
+    }
+
+    return frequency;
+}

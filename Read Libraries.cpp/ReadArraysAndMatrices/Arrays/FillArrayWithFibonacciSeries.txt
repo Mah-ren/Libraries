@@ -1,0 +1,12 @@
+ 
+void FillArrayWithFibonacciSeries(short array[1000] , short &length)
+{
+    length = GetValidPositiveIntegerInRange("Enter the length of the array, between 1-100: " , 1 , 1000) ;
+    array[0] = 1 ; 
+    array[1] = 1 ;
+    
+	for(short i = 2 ; i <= length+1 ; i++)
+	{
+        array[i] = array[i-2] + array[i-1] ;
+    }
+} 

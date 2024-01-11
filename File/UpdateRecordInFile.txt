@@ -1,0 +1,16 @@
+
+void UpdateRecordInFile(string fileName , string oldRecord , string updateRecord)
+{
+    vector<string> vFileContent ;
+    LoadDataFromFileToVector(fileName , vFileContent);
+
+    for(string &line : vFileContent)
+    {
+        if(line == oldRecord)
+        {
+            line = updateRecord ;
+        }
+    }
+    
+    SaveVectorToFile(fileName , vFileContent);
+}

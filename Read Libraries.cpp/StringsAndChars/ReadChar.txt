@@ -1,0 +1,10 @@
+
+char GetCharByUser(string prompt)
+{
+    char notion = 'c';
+
+    cout << prompt;
+    cin >> notion;
+
+    return notion;
+}

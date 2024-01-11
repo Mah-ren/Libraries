@@ -1,0 +1,5 @@
+
+bool isOddNumber(int number)
+{
+    return number % 2 != 0 ;
+}

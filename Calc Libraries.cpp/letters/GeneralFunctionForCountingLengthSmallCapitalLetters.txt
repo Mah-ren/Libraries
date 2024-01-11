@@ -1,0 +1,18 @@
+
+short GeneralFunctionForCountingLengthSmallCapitalLetters (string &str , enWhatToCount whatToCount=enWhatToCount::All)
+{
+    if(whatToCount == enWhatToCount::All)
+        return str.length();
+
+    short count = 0 ; 
+    
+    for (short i = 0; i < str.length(); i++)
+    {
+        if(whatToCount == enWhatToCount::CapitalLetters && isupper(str.at(i)))
+            count++ ;
+        else if(whatToCount == enWhatToCount::SmallLetters && islower(str.at(i)))
+            count++ ;
+    }
+
+    return count ;
+}

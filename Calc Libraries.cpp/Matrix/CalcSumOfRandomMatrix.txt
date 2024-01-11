@@ -1,0 +1,11 @@
+
+int CalcSumOfRandomMatrix(int matrix[100][100] , int rows , int columns)
+{
+    int sum = 0 ;
+   
+    for(int i = 0 ; i < rows ; ++i)
+        for(int j = 0 ; j < columns ; ++j)
+            sum += matrix[i][j] ;
+    
+    return sum ;
+}

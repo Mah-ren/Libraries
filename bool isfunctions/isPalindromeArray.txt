@@ -1,0 +1,13 @@
+
+bool isPalindromeArray(int array[] , int arrayLength)
+{
+    int j = arrayLength - 1 ;
+    
+    for(int i = 0 ; i < arrayLength ; i++)
+    {
+        if(array[i] != array[j - i])
+            return false;
+    }
+
+    return true;
+}

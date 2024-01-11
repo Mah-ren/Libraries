@@ -1,0 +1,10 @@
+
+string InvertAllLettersCase(string &str)
+{
+    for(int i = 0 ; i < str.length() ; ++i)
+    {
+        str.at(i) = InvertLetterCase(str.at(i)) ;
+    }
+
+    return str ;
+} 

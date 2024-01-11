@@ -1,0 +1,11 @@
+
+void FillMatrixWithRandomNumbers(int array[100][100] , int &length)
+{
+    length = GetValidPositiveNumberInRange("\nPlease Enter How many Numbers: \n" , 1 , 100 );
+    
+    for(int i = 0 ; i < length ; ++i)
+    {
+        for(int j = 0 ; j < length ; ++j)
+            array[i][j] = GetRandomNumberInRange(1,100);
+    }
+}

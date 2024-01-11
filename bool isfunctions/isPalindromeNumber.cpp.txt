@@ -1,0 +1,5 @@
+
+bool IsPalindromeNumber(int number)
+{
+    return number == ReverseNumber(number);
+}

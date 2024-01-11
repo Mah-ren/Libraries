@@ -1,0 +1,14 @@
+
+void FillMatrixWithPositiveIntegersByUser(int matrix[100][100] , int &rows , int &columns)
+{
+    short counter = 1 ;
+
+    for(int i = 0 ; i < rows ; ++i)
+    {
+        for(int j = 0 ; j < columns ; ++j)
+        {
+            matrix[i][j] = GetValidPositiveIntegerInRange("\nPlease Enter Integer " + to_string(counter) + " : \n",0,100);
+            counter ++ ;
+        }
+    }
+}

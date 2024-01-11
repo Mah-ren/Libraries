@@ -1,0 +1,19 @@
+void LoadDataFromFileToVector(string fileName , vector<string> &vFileContent)
+{
+    fstream file ; 
+    file.open(fileName , ios::in);
+
+    if(file.is_open())
+    {
+        string line ; 
+        
+           while(getline(file , line)) 
+        {
+            vFileContent.push_back(line);
+        }
+
+        file.close();
+    }
+    else 
+        cout << "\nError opening file: " << fileName << endl ;
+}

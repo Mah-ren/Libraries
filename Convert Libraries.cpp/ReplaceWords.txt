@@ -1,0 +1,56 @@
+
+vector<string> SplitString(string str , string delimeter = " ")
+{
+    vector<string> vString ;
+    string word ;
+    short position = 0 ;
+ 
+    while((position = str.find(delimeter)) != str.npos)
+    {   
+        word = str.substr(0,position);
+        
+        if(word != "")
+        {
+            vString.push_back(word);
+        }
+        
+        str.erase(0 , position + delimeter.length());
+    }
+
+    if(str != "")
+    {
+        vString.push_back(str);
+    } 
+
+    return vString ;
+}
+
+string JoinString(vector<string> &vNames , string delimiter)
+{
+    string str ;
+    
+    for(const string &element : vNames)
+    {                                    
+        str += element + delimiter ;    
+    }                                   
+    return str.substr(0 , str.length()-delimiter.length()) ;
+}
+
+string ReplaceTwoWordsInStringWithSplit(string str , string stringToReplace , string sReplaceTo , bool matchCase)
+{
+    vector<string> vString ;
+    vString = SplitString(str , " ");
+    for(string &s : vString)
+    {
+        if(matchCase)
+        {
+            if(s == stringToReplace)
+                s = sReplaceTo ;
+        }
+        else 
+            if(LowerAllString(s) == LowerAllString(stringToReplace))
+                s = sReplaceTo ;
+    }
+
+    return JoinString(vString , " ");
+}

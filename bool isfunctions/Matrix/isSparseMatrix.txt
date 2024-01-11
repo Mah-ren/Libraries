@@ -1,0 +1,22 @@
+
+short CountNumberRepeatationInMatrix(int matrix[100][100] , int &rows , int &columns, short searchNumber)
+{
+    short counter = 0 ;
+     
+    for(int i = 0 ; i < rows ; ++i)
+    {
+        for(int j = 0 ; j < columns ; ++j)
+        {   
+            if(matrix[i][j] == searchNumber)
+                counter ++ ;
+        }
+    }
+    return counter ;
+}
+
+bool isSparseMatrix(int matrix[100][100] , int rows , int columns)
+{
+    short halfOfMatrixSize = rows * columns / 2 ;
+    return  CountNumberRepeatationInMatrix(matrix , rows , columns , 0) >= halfOfMatrixSize ;
+//! this is better than this return zero > (rows*columns -zero) ;
+}

@@ -1,0 +1,20 @@
+void FillVectorWithWordsInString(string str , vector<string> &vString , string delimeter)
+{
+    short position = 0 ; 
+    string word ;
+
+    while((position = str.find(delimeter)) != str.npos)
+    {
+        word = str.substr(0 , position);
+        if(word != "")
+        {
+            vString.push_back(word);
+        }
+        str.erase(0 , position + delimeter.length());
+    }
+
+    if(str != "")
+    {
+        vString.push_back(str);
+    } 
+}

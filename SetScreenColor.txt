@@ -1,0 +1,14 @@
+
+void SetScreenColor(bool rightAnswer  , string messageIfRightAnswer , string messageIfWrongAnswer)
+{
+    if(rightAnswer)    
+    {
+        cout << messageIfRightAnswer;
+        system("color a0");
+    }
+    else 
+    {
+        cout << messageIfWrongAnswer;
+        system("color c0");
+    }
+}

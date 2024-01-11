@@ -1,0 +1,30 @@
+
+bool FindClientByAccountNumber(vector<CD>vClients, CD cd , string accountNumber)
+{
+    for(CD client : vClients)
+    {
+        if(cd.accountNumber == accountNumber)
+        {
+            cd = client;
+            return true;
+        }
+    }
+    return false;
+}
+
+
+
+
+void SearchForClientsbyAccountNumber(vector<CD> vClients)
+{
+    CD cd;
+    string accountNumber = GetStringInput("\nPlease Enter Account Number: ");
+
+    if(FindClientByAccountNumber(vClients, cd, accountNumber))
+    {
+        cout << "\nThe Following are the Client Details \n";
+        PrintOneClientDataLongitudinallyAndtransversely(cd , 'l');
+    }
+    else
+        cout <<"\nClient with Account Number (" << accountNumber << ") is Not Found!";
+}

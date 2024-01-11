@@ -1,0 +1,14 @@
+
+
+short CountLetterInString(char &c , string &str)
+{
+    short count = 0 ; 
+    
+    for(int i = 0 ; i < str.length() ; ++i)
+    {
+        if(str.at(i) == c)
+            count++ ;
+    }
+
+    return count ;
+}

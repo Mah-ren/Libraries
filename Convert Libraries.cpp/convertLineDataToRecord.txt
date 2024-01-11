@@ -1,0 +1,16 @@
+
+void ConvertLineDataToRecord(CD &cd , string lineRecord)
+{
+    vector<string> vString ; 
+    vString = SplitString(lineRecord , "#//#");
+
+    for(short i = 0 ; i < vString.size() ; ++i)
+    {
+        cd.accountNumber = vString[0] ; 
+        cd.pinCode       = vString[1] ;
+        cd.name          = vString[2] ;
+        cd.phone         = vString[3] ;
+        cd.balance       = stod(vString[4]) ;
+    }
+}
+ 

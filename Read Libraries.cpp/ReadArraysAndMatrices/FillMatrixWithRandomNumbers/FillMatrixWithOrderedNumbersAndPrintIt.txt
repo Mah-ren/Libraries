@@ -1,0 +1,30 @@
+	
+void FillMatrixWithOrderedNumbers(int matrix[100][100] , int &rows , int &columns)
+{
+    rows = GetValidPositiveIntegerInRange("\nPlease Enter Columns Matrix Numbers: " , 1 , 100);
+    columns = GetValidPositiveIntegerInRange("\nPlease Enter Rows Matrix Numbers: " , 1 , 100);
+    
+    short counter = 0 ;
+
+    for(short i = 0 ; i <= rows ; ++i)                  
+    {                                                   
+        for(short j = 0 ; j < columns ; ++j)                               
+        {    counter++;
+            matrix[i][j] = counter ;                            
+        }
+    }                                                                   
+}        
+
+
+void PrintMatrix(int matrix[100][100] , int rows , int columns)
+{
+	for(short i = 0 ; i < rows ; ++i)                           
+	{
+        cout << "|" ;
+
+		for(short j = 0 ; j < columns ; ++j)
+			cout << setw(3) << right << matrix[i][j] << "|";
+		cout << endl ;
+	}
+}
+                                                 

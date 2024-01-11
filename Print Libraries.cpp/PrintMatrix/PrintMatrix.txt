@@ -1,0 +1,12 @@
+
+void PrintMatrix(int matrix[100][100] , int rows , int columns)
+{
+    for(short i = 0 ; i < rows ; ++i)                           
+    {
+        cout << "|" ;
+
+        for(short j = 0 ; j < columns ; ++j)
+            cout << setw(3) << right << matrix[i][j] << "|";
+        cout << endl ;
+    }
+}

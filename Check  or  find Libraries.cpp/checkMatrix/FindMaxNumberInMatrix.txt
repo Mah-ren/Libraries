@@ -1,0 +1,18 @@
+
+short FindMaxNumberInMatrix(short matrix[100][100] , short rows , short columns)
+{ 
+    short max = matrix[0][0] ;
+    
+    for(short i = 0 ; i < rows ; i++)
+    {
+        for(short j = 0 ; j < columns ; ++j)
+        {
+            if(matrix[i][j] > max)
+            {
+                max = matrix[i][j] ;
+            }
+        }
+    }
+    
+    return max ; 
+}

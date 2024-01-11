@@ -1,0 +1,13 @@
+
+short CountingUpperLettersInString(string &str)
+{
+    short upperLetters = 0 ;
+
+    for(int i = 0 ; i < str.length() ; ++i)
+    {
+        if(isupper(str.at(i)))
+            upperLetters++ ;
+    }
+
+    return upperLetters ;
+}

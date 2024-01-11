@@ -1,0 +1,26 @@
+
+ 
+CD ReadNewClientData(string prompt)
+{
+    CD cd ;
+   
+    cout << prompt ;
+    
+    cout << "\nEnter Account Number: ";
+    getline(cin , cd.accountNumber);
+
+    cout << "\nEnter Pin Code: ";
+    getline(cin , cd.pinCode);    
+
+    cout << "\nEnter Name: ";
+    getline(cin , cd.name) ;
+    
+    cout << "\nEnter Phone: ";
+    getline(cin , cd.phone);
+
+    cout << "\nEnter Account Balance: ";
+    cin >> cd.balance ;
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //~ Clear buffer
+    return cd ;
+}

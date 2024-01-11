@@ -1,0 +1,5 @@
+
+char InvertLetterCase(char c)
+{
+    return isUpperLetter(c) ? tolower(c) : toupper(c);
+}

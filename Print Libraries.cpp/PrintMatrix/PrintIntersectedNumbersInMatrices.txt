@@ -1,0 +1,16 @@
+
+void PrintIntersectedNumbersInMatrices(int matrix1[100][100] , int matrix2[100][100] , int rows , int columns)
+{
+    cout << "{ " ;
+    
+    for(int i = 0 ; i < rows ; ++i)
+    {   
+        for(int j = 0 ; j < columns ; ++j)
+        {
+            if(isNumberFoundInMatrix(matrix1 , rows , columns , matrix2[i][j]))
+                cout  << matrix2[i][j] << " "  ;
+        }
+    }
+
+    cout << "}\n";
+}

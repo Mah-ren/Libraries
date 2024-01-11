@@ -1,0 +1,10 @@
+
+void PrintVector(vector<string> &vString)
+{
+    for(string &element : vString)
+    {
+        cout << element << "\n";
+    }
+
+    cout << endl ;
+}   

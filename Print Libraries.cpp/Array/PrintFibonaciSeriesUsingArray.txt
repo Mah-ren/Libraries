@@ -1,0 +1,14 @@
+
+void PrintFibonacciSeriesUsingLoop(short &length)
+{ 
+    short febNumber = 0 , prev2 = 0 , prev1 = 1 ; 
+    cout << "\n{ 1 ";
+	for(short i = 2 ; i <= length+1 ; i++)
+	{
+        febNumber = prev2 + prev1 ;
+        cout << ", " << febNumber << " ";
+        prev2 = prev1 ; 
+        prev1 = febNumber ;
+    }
+    cout << "}\n";
+} 

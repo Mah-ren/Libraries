@@ -1,0 +1,14 @@
+
+void PrintMiddleRowOrColumnsOfMatrix(int matrix[100][100] , int rows , int columns , char c)
+{ 
+    short middleRows = rows / 2 ; 
+    short middleColumns = columns / 2 ;
+
+    if(c == 'r' || c == 'R')
+        for(int j = 0 ; j < columns ; ++j)
+            cout << matrix[(int)ceil(middleRows) - 1][j] << " ";
+   
+    else if(c == 'c' || c == 'C')
+        for(int j = 0 ; j < rows ; ++j)
+            cout << matrix[j][(int)ceil(middleColumns) - 1] << " ";
+}

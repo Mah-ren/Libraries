@@ -1,0 +1,10 @@
+
+string GetStringInput(string prompt)
+{
+    string str;
+    
+    cout << prompt ;
+    getline(cin , str);
+
+    return str ;
+}

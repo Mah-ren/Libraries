@@ -1,0 +1,14 @@
+
+void PrintHyphen(int length)
+{
+    if(length >= 5)
+        cout << "\n-----------------------------\n";
+    else if(length >=4)
+        cout << "\n-----------------------\n";
+    else if(length >= 3)
+        cout << "\n-----------------\n";
+    else if(length >=2)
+        cout << "\n-----------\n";
+    else 
+        cout << "------";
+}

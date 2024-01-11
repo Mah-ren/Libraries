@@ -1,0 +1,41 @@
+
+void PrintHyphen(int number)
+{            
+    if(number == 1)
+        cout << "-------\n";
+    else if(number == 2)
+        cout << "-------------\n";
+    else if(number == 3)
+        cout << "-------------------\n";
+    else if(number == 4)
+        cout << "-------------------------\n";
+    else if(number == 5)
+        cout << "-------------------------------\n";
+    else if(number == 6)
+        cout << "-------------------------------------\n";
+    else if(number == 7)
+        cout << "-------------------------------------------\n";
+    else if(number == 8)
+        cout << "-------------------------------------------------\n";
+    else if(number == 9)
+        cout << "-------------------------------------------------------\n";
+    else if(number == 10)
+        cout << "-------------------------------------------------------------\n";
+}
+
+void PrintMatrix(int array[100][100] , int length)
+{
+    for(int i = 0 ; i < length ; ++i)
+    {   
+        PrintHyphen(length);
+        cout << setw(1)  << left << "|" ;
+
+        for(int j = 0 ; j < length ; ++j)
+            cout << setw(4) << right <<  array[i][j] << " |";
+
+        cout << "\n" ;
+    }
+   
+    PrintHyphen(length);
+}
+

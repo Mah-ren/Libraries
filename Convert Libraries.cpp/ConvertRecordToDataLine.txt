@@ -1,0 +1,5 @@
+
+string ConvertRecordToLine(string delimiter , CD cd)
+{
+    return  (cd.accountNumber + delimiter + (cd.pinCode) + delimiter + cd.name + delimiter + cd.phone + delimiter + to_string(cd.balance));
+}

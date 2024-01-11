@@ -1,0 +1,9 @@
+
+void MultiplyTwoMatrixesIntoThirdOne(int matrix1[100][100] , int matrix2[100][100] , int matrix3[100][100] , int rows , int columns)
+{
+    for(short i = 0 ; i < rows ; ++i)                           
+	{
+        for(short j = 0 ; j < columns ; ++j)
+			matrix3[i][j] = matrix1[i][j] * matrix2[i][j] ;
+    }
+}

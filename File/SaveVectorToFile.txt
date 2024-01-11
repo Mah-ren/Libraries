@@ -1,0 +1,19 @@
+
+void SaveVectorToFile(string fileName , vector<string> &vFileContent)
+{
+    fstream File ; 
+    File.open(fileName , ios::out);
+    
+    if(File.is_open())
+    {
+        for(string &line : vFileContent)
+        {
+            if(line != "")
+            {
+                File << line << endl ;
+            }
+        }
+
+        File.close();
+    }
+}

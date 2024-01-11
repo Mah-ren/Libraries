@@ -1,0 +1,10 @@
+
+void FillArrayWithIntegersByUser(short array[100] , short &length)
+{
+	length = GetValidPositiveIntegerInRange("Enter the length of the array, between 1-100: " , 1 , 100) ;
+	 
+	for(short i = 0 ; i < length ; i++)
+	{
+           array[i] = GetValidPositiveIntegerInRange("\n[" + to_string (i+j+1) +"] Please Enter a Positve Integer: \n", 1 , 100) ;
+    }
+}

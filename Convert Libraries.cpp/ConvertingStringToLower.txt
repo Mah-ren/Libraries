@@ -1,0 +1,17 @@
+
+string ConvertingStringToLower(string &str)
+{
+    for(short i = 0 ; i < str.length() ; ++i)
+    {
+        str.at(i) = tolower(str.at(i));
+    }
+    return str ;
+}
+ 
+
+void ConvertAllLettersToLower(string &str)
+{ 
+    cout << "\nAfter Converting all letters to lower: \n";
+    str = ConvertingStringToLower(str);
+    cout << str << endl ;
+}

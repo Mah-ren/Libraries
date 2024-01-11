@@ -1,0 +1,21 @@
+
+
+string ReverseWords(string &str , string delimiter = " ")
+{                                                              
+    short position = 0 ;                                     
+    string newString , word;                                   
+      
+    while((position = str.rfind(delimiter)) != str.npos)
+    {    
+        word = str.substr( position+1 , str.length()-1);
+        newString += word  + delimiter ;
+        str.erase(position-delimiter.length()+1 , str.length()-1);
+    }   
+
+    if(str != "")
+        newString += str ;
+
+    return newString ;
+}
+
+ 

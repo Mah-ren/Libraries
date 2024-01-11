@@ -1,0 +1,13 @@
+
+short CountVowelsInString(string &str)
+{
+    short count = 0 ;
+
+    for(int i = 0 ; i < str.length() ; ++i)
+    {
+        if(isVowl(str.at(i)))
+            count++;
+    }
+
+    return count ;
+}

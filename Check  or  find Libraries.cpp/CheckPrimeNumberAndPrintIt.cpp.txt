@@ -1,0 +1,32 @@
+
+
+enum enPrimeNumber 
+{
+    Prime    = 1, 
+    NotPrime = 2
+};
+
+enPrimeNumber CheckPrimeNumber(int number)
+{
+    int halfNumber = round(number / 2);
+
+    for(int i = 2 ; i <= halfNumber ; i++)
+    {
+        if(number % i == 0)
+        return enPrimeNumber::NotPrime ;
+    }
+    return enPrimeNumber::Prime ;
+}
+
+void PrintPrimeNumber(int number)
+{   
+    for(int counter1 = 1 ; counter1 <= number ; counter1++)
+    {
+        if(CheckPrimeNumber(counter1) == enPrimeNumber::Prime)
+        {
+            cout << counter1 ;
+            cout << "\n"; 
+        }
+         
+    }
+}

@@ -1,0 +1,11 @@
+
+void PrintVowelsLettersInString(string &str)
+{
+    cout << "\nvowels Letters in this string are: ";
+    
+    for(int i = 0 ; i < str.length() ; ++i)
+    {
+        if(isVowl(str.at(i)))
+            cout << str.at(i) << " "  ;
+    }
+}

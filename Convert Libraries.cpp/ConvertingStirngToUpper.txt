@@ -1,0 +1,17 @@
+
+string ConvertingStringToUpper(string &str)
+{
+    for(short i = 0 ; i < str.length() ; ++i)
+    { 
+        str.at(i) = toupper(str.at(i));
+    }
+    return str ;
+}
+ 
+void ConvertAllLettersToUpper(string &str)
+{
+    cout << "\nAfter Converting all letters to upper: \n";
+    
+    str = ConvertingStringToUpper(str);
+    cout << str << endl ;
+}

@@ -1,0 +1,12 @@
+
+void FillArrayWithRandomNumbers(int array[] , int &arrayLength)
+{
+    arrayLength = GetValidPositiveInteger("\n\nPlease Enter Number Of Elements: ") ;
+
+    for(int i = 0 ; i < arrayLength ; i++)
+    {
+      array[i] = GenerateRandomIntegerInRange(1 , 100)  ;
+    }
+
+    cout << endl ;
+}  

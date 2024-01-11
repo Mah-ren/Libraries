@@ -1,0 +1,20 @@
+الاول انت بتعمل الملف على مود الكتابة او الابند ثم لو الملف موجود انت بتعمل الفنكشن على مود القراءة 
+كمان الفنكشن بتاخد اسم الملف فقط و بتطبع محتوى الملف 
+
+
+void PrintFileContent(string fileName)
+{
+    fstream File ; 
+    File.open(fileName , ios::in);
+    if(File.is_open())
+    {
+        string stringContent ;
+
+        while(getline(File , stringContent))
+        {
+            cout << stringContent << endl ;
+        }
+
+        File.close();
+    }
+}

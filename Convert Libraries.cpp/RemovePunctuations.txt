@@ -1,0 +1,17 @@
+
+string RemovePunctuationsInString(string &str)
+{
+    string s = "";
+    for(short i = 0 ; i < str.length() ; ++i)
+    {
+        if(!isPunctuation(str[i]))
+            s += str[i]; 
+    }
+    
+    return s;
+}
+
+bool isPunctuation(char c)
+{
+     return (c == '!' || c == '"' || c == '#' || c == '$' || c == '%' || c == '&' || c == '\'' || c == '(' || c == ')' || c == '*' || c == '+' || c == ',' || c == '-' || c == '.' || c == '/' || c == ':' || c == ';' || c == '<' || c == '=' || c == '>' || c == '?' || c == '@' || c == '[' || c == '\\' || c == ']' || c == '^' || c == '_' || c == '`' || c == '{' || c == '|' || c == '}' || c == '~');
+} 

@@ -1,0 +1,12 @@
+
+string RemoveSpacesFromString(string str , string delimeter)
+{     
+    short position = 0 ; 
+
+    while((position = str.find(delimeter)) != str.npos)
+    {
+        str.erase(position , delimeter.length());
+    }            
+    
+    return str ;
+}

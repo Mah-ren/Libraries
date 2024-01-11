@@ -1,0 +1,12 @@
+
+int CalcSumOfOneColumn(int array[100][100] , short row , short column)
+{
+	int sum = 0 ;
+	
+	for(int j = 0 ; j < row ; ++j)
+	{
+		sum += array[j][column] ;
+	}
+	
+	return sum ;
+}

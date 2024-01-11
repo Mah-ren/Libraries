@@ -1,0 +1,14 @@
+void ReadElementOfArray(int Array[100] , int &arrayLength)
+{
+    arrayLength = GetValidatePositiveInteger("\nPlease Enter Number Of Elements: ");
+
+    cout << "\nEnter Array Elements: \n" ;
+
+    for(int i = 0 ; i < arrayLength ; i++)
+    {
+        cout << "\nElement [ " << i+1 << " ] : " ;
+        cin  >> Array[i];
+    }
+
+    cout << endl ;
+}
